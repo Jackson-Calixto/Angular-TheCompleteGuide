@@ -1,3 +1,6 @@
 <!DOCTYPE html>
-<!-- The String Interpolation {{'Server'}} is only to demonstrate that the expression must be resolved as string -->
-<p [ngStyle]="{backgroundColor: getColor()}">{{ "Server" }} ID: {{ serverID }} is {{ getServerStatus() }}</p>
+<p
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{'online': serverStatus === 'online'}">
+  {{ "Server" }} ID: {{ serverID }} is {{ getServerStatus() }}
+</p>
