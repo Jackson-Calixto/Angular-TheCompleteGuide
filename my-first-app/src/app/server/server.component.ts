@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   .online {
     color: white;
   }
+  .offline {
+    color: yellow;
+  }
   `],
 })
 export class ServerComponent {
