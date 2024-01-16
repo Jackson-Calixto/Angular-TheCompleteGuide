@@ -12,6 +12,6 @@ export class AppComponent {
 
   setDisplayDetails() {
     this.displayDetails = !this.displayDetails;
-    this.logs.push(this.logs.length + 1);
+    this.logs.push(new Date());
   }
 }
