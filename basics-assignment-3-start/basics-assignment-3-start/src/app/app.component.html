@@ -10,10 +10,13 @@
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color
           (ngClass)</li>
       </ol>
+      <hr>
+      <input type="button" value="Display Details" class="btn btn-primary" (click)="setDisplayDetails()">
+      <p *ngIf="displayDetails">Secret Password = tuna</p>
+      <div *ngFor="let log of logs" [ngStyle]="{backgroundColor: log >= 5? 'blue':'transparent'}"
+        [ngClass]="{'white-text': log >= 5}">
+        {{log}}
+      </div>
     </div>
   </div>
 </div>
-<hr>
-<input type="button" value="Display Details" class="btn btn-primary" (click)="setDisplayDetails()">
-<p *ngIf="displayDetails">Secret Password = tuna</p>
-<p *ngFor="let listTimestamp of timestamps">Log: {{listTimestamp}}</p>

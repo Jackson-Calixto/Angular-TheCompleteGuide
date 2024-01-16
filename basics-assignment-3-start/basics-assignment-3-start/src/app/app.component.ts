@@ -8,10 +8,10 @@ import { timestamp } from 'rxjs';
 })
 export class AppComponent {
   displayDetails: boolean;
-  timestamps = [];
+  logs = [];
 
   setDisplayDetails() {
     this.displayDetails = !this.displayDetails;
-    this.timestamps.push(new Date())
+    this.logs.push(this.logs.length + 1);
   }
 }
